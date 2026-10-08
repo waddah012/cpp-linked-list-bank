@@ -1,33 +1,16 @@
-# Linked List Account Manager
+# Linked list bank
 
-A singly linked list supporting account insertion, lookup, removal, deposits, and withdrawals.
+I used a singly linked list to store bank accounts in this project. Each node holds an account and a pointer to the next node.
 
-An educational C++ example developed from coursework, organized as a standalone project.
+The menu lets you add an account, find it by ID, make a deposit or withdrawal, remove it, and print the accounts. Enter 0 when you want to exit.
 
-## Build and run
+The accounts only stay in memory while the program is running. It does not save them to a file, and it does not stop you from using the same ID twice.
 
-Requires a C++17 compiler and Make. Smoke checks also require Python 3.
+To build and run it, you need a C++17 compiler and Make. Open a terminal in this folder and run:
 
 ```sh
 make
 make run
-make check
 ```
 
-To choose a compiler: `make CXX=clang++` or `make CXX=g++`. Run `make clean` to remove build outputs.
-
-## Example
-
-Use the numbered menu to manage in-memory example accounts; choose 0 to exit.
-
-## Structure
-
-- `src/`: source code and headers.
-- `tests/smoke.py`: representative console checks with execution timeouts.
-- `Makefile`: builds the source files together into `build/example`.
-
-## Scope
-
-Data exists only during execution. Account identifiers are not enforced as unique, and menu input validation is limited.
-
-The source retains the original exercise logic and explanatory comments. Build outputs, submission documents, and course materials are not part of this repository.
+You can also run `make check` to check the sample output. That needs Python 3. Use `make clean` if you want to remove the compiled program.
